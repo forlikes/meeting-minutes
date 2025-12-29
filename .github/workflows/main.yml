@@ -29,4 +29,9 @@ jobs:
         run: npm run tauri build
 
       - name: Upload Windows artifacts
-        uses: actions/uplo
+        uses: actions/upload-artifact@v4
+        with:
+          name: meetily-windows-build
+          path: |
+            frontend/src-tauri/target/release/bundle/**
+
